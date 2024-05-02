@@ -2,7 +2,7 @@
 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { sendEmail } from "../../service/Email/sendEmail.js";
+import { sendEmail } from "../../Service/Email/sendEmail.js";
 import userModel from "../../../DB/models/user.model.js";
 
 import { appError } from "../../Utils/app.Error.js";

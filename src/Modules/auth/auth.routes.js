@@ -2,7 +2,7 @@ import { Router } from "express";
 
 import * as authController from './auth.controller.js';
 import * as authValidations from './auth.validation.js';
-import { validationMiddleware } from "../../middleware/validation.middleware.js";
+import { validationMiddleware } from "../../Middleware/validation.middleware.js";
 
 
 

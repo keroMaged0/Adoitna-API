@@ -6,7 +6,7 @@ import * as authController from '../auth/auth.controller.js';
 
 import { endPointRoles } from "./medicine.endPoint.js";
 import { multerMiddleHost } from "../../Middleware/multer.js";
-import { allowedExtensions } from "../../utils/allowed-extensions.js";
+import { allowedExtensions } from "../../Utils/allowed-extensions.js";
 import { validationMiddleware } from "../../Middleware/validation.middleware.js";
 
 

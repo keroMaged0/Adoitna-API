@@ -3,7 +3,7 @@ import { Router } from "express";
 import * as authController from '../auth/auth.controller.js'
 import * as userValidation from './user.validation.js'
 
-import { validationMiddleware } from "../../middleware/validation.middleware.js";
+import { validationMiddleware } from "../../Middleware/validation.middleware.js";
 import { endPointRoles } from "./user.endPoint.js";
 import userController from "./user.controller.js";
 

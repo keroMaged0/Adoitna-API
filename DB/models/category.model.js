@@ -46,4 +46,4 @@ categorySchema.virtual('medicines', {
 });
 
 
-export default mongoose.models.category || mongoose.model('Category', categorySchema)
+export default mongoose.models.Category || mongoose.model('Category', categorySchema)

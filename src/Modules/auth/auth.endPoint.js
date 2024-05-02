@@ -1,4 +1,4 @@
-import { systemRoles } from "../../utils/system_roles.js";
+import { systemRoles } from "../../Utils/system_roles.js";
 
 
 export const endPointRoles = {

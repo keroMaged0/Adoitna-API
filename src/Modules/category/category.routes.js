@@ -5,9 +5,9 @@ import * as authController from '../auth/auth.controller.js';
 import { endPointRoles } from "./category.endPoint.js";
 import * as categoryValidation from './category.validation.js';
 
-import { multerMiddleHost } from "../../middleware/multer.js";
-import { allowedExtensions } from "../../utils/allowed-extensions.js";
-import { validationMiddleware } from "../../middleware/validation.middleware.js";
+import { multerMiddleHost } from "../../Middleware/multer.js";
+import { allowedExtensions } from "../../Utils/allowed-extensions.js";
+import { validationMiddleware } from "../../Middleware/validation.middleware.js";
 
 
 

@@ -1,10 +1,9 @@
 import slugify from "slugify"
 import categoryModel from "../../../DB/models/category.model.js"
-import { catchError } from "../../middleware/global-response.middleware.js"
+import { catchError } from "../../Middleware/global-response.middleware.js"
 import cloudinaryConnection from "../../Utils/cloudinary.js"
 import medicineModel from "../../../DB/models/medicine.model.js"
-import { model } from "mongoose"
-import generateUniqueString from "../../utils/generate-Unique-String.js"
+import generateUniqueString from "../../Utils/generate-Unique-String.js"
 import { appError } from "../../Utils/app.Error.js"
 import { apiFeature } from "../../Service/api_feature.js"
 
@@ -302,11 +301,11 @@ const getSpecificMedicineController = catchError(
         // destruct required data  
         const { id } = req.params
 
-        const medicine = await medicineModel.findOne({ _id: id  })
-        .populate(
-            { path: 'addedBy', select: 'name' },
-       
-        )
+        const medicine = await medicineModel.findOne({ _id: id })
+            .populate(
+                { path: 'addedBy', select: 'name' },
+
+            )
 
         if (!medicine) return next(new appError('!not found medicine', 401))
 

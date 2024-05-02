@@ -3,8 +3,8 @@ import userModel from "../../../DB/models/user.model.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-import { catchError } from "../../middleware/global-response.middleware.js";
-import { sendEmail } from "../../service/Email/sendEmail.js";
+import { catchError } from "../../Middleware/global-response.middleware.js";
+import { sendEmail } from "../../Service/Email/sendEmail.js";
 import { appError } from "../../Utils/app.Error.js";
 
 //=================================== Get User Profile Data controller ===================================//  (done)

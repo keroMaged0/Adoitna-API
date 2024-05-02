@@ -1,8 +1,8 @@
 import slugify from "slugify";
 import categoryModel from "../../../DB/models/category.model.js";
-import { catchError } from "../../middleware/global-response.middleware.js";
+import { catchError } from "../../Middleware/global-response.middleware.js";
 import { appError } from "../../Utils/app.Error.js";
-import generateUniqueString from "../../utils/generate-Unique-String.js";
+import generateUniqueString from "../../Utils/generate-Unique-String.js";
 import cloudinaryConnection from "../../Utils/cloudinary.js";
 import { apiFeature } from "../../Service/api_feature.js";
 
