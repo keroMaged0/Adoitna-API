@@ -30,6 +30,5 @@ export const sendEmail = async ({ email, type, req }) => {
     html: test, // html body
 
   });
-  console.log("Message sent: %s", info.messageId);
 
 }

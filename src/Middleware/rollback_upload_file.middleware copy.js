@@ -1,4 +1,4 @@
-import cloudinaryConnection from "../utils/cloudinary.js"
+import cloudinaryConnection from "../Utils/cloudinary.js"
 
 
 export const rollbackMiddleware = async (req, res, next) => {

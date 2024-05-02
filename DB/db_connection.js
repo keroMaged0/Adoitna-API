@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 export const DB_Connection = () => {
-    mongoose.connect(process.env.CONNECTION_URL_LOCAL)
+    mongoose.connect(process.env.CONNECTION_URL_HOST)
         .then(() => {
             console.log("Connected to DB")
         })
