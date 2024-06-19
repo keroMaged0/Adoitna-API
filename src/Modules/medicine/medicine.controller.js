@@ -26,9 +26,17 @@ const createMedicineController = catchError(
         // destruct required data
         const {
             name,
-            description
+            description,
+            quantity,
+            expiryDate,
+            categoryId
         } = req.body
         const { _id } = req.user
+
+        // check if found category
+        const category = await categoryModel.findById(categoryId)
+        if (!category) return next(new appError('!not found category', 401))
+
 
         // if not found image 
         if (!req.files?.length) return next(new appError('must be send image', 400))
@@ -47,20 +55,23 @@ const createMedicineController = catchError(
             const { secure_url, public_id } = await cloudinaryConnection().uploader.upload(
                 file.path,
                 {
-                    folder: `/medicine/${folderId}`
+                    folder: category.Image.public_id.split(`${category.folderId}/`)[0] + `${category.folderId}` + `/medicine/${folderId}`
                 })
             imagesArr.push({ secure_url, public_id })
         }
 
         // if error rollback upload file 
-        req.folder =  `/medicine/${folderId}`
+        req.folder = category.Image.public_id.split(`${category.folderId}/`)[0] + `${process.env.MAIN_FOLDER}` + `/medicine/${folderId}`
 
         const medicineObj = {
             name,
             slug,
             description,
             folderId,
+            quantity,
             Images: imagesArr,
+            expiryDate,
+            categoryId,
             addedBy: _id
         }
 
